@@ -27,6 +27,7 @@ app.post('/send-email', (req, res) => {
     from: email,
     to: process.env.EMAIL_USER,
     subject: `New message from ${name}`,
+    replyTo: email,
     text: message,
   };
 
